@@ -2,7 +2,7 @@
  * SiteGiG CMS Example Plugin
  */
 
-sitegig.controller("examplePluginCtrl", function($scope, $cookies, $http) {
+sitegig.controller("examplePluginCtrl", [ '$scope', '$cookies', '$http', function($scope, $cookies, $http) {
 
 	$scope.name = 'example';
 	$scope.fullname = 'Example Plugin';
@@ -26,4 +26,4 @@ sitegig.controller("examplePluginCtrl", function($scope, $cookies, $http) {
 		return 'plugins/' + $scope.name + '/templates/' + $scope.name + '.html';
 	};
 
-});
+}]);
